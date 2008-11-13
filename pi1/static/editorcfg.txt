@@ -1,0 +1,278 @@
+
+plugin.tx_simplesurvey_pi1.CSS_editor = Plugin: "tx_simplesurvey_pi1"
+plugin.tx_simplesurvey_pi1.CSS_editor.selector = .tx-simplesurvey-pi1
+plugin.tx_simplesurvey_pi1.CSS_editor.exampleWrap = <HR><strong>Plugin: "tx_simplesurvey_pi1"</strong><HR><div class="tx-simplesurvey-pi1"> | </div>
+plugin.tx_simplesurvey_pi1.CSS_editor.ch {
+	P = Text
+	P.selector = P
+	P.attribs = BODYTEXT
+	P.example = <p>General text wrapped in &lt;P&gt;:<br />This is text <a href="#">with a link</a> in it. In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+	P.exampleStop = 1
+	P.ch.links = < CSS_editor.ch.A
+
+	H2 = Header 2
+	H2.selector = H2
+	H2.attribs = HEADER
+	H2.example = <H2>Header 2 example <a href="#"> with link</a></H2><p>Bodytext, Et praeessent diei ac nocti et dividerent lucem ac tenebras et vidit Deus quod esset bonum et factum est...</p>
+	H2.ch.links = < CSS_editor.ch.A
+	H2.exampleStop = 1
+
+	H3 = Header 3
+	H3.selector = H3
+	H3.attribs = HEADER
+	H3.example = <h3>Header 3 example <a href="#"> with link</a></h3><p>Bodytext, Et praeessent diei ac nocti et dividerent lucem ac tenebras et vidit Deus quod esset bonum et factum est...</p>
+	H3.ch.links = < CSS_editor.ch.A
+	H3.exampleStop = 1
+
+
+		## LISTING:
+	modeSelector = Mode selector
+	modeSelector.selector = .tx-simplesurvey-pi1-modeSelector
+	modeSelector.example = <div class="tx-simplesurvey-pi1-modeSelector"><table><tr><td class="tx-simplesurvey-pi1-modeSelector-SCell"><p><a HREF="#">Mode 1 (S)</a></p></td><td><p><a HREF="#">Mode 2</a></p></td><td><p><a HREF="#">Mode 3</a></p></td></tr></table></div>
+	modeSelector.exampleStop = 1
+	modeSelector.ch.P < .P
+	modeSelector.ch.TABLE = Table
+	modeSelector.ch.TABLE.selector = TABLE
+	modeSelector.ch.TABLE.attribs = TABLE
+	modeSelector.ch.TD = Table cells
+	modeSelector.ch.TD.selector = TD
+	modeSelector.ch.TD.attribs = TD
+	modeSelector.ch.TD.ch {
+	  TD = Selected table cells
+	  TD.selector = + .tx-simplesurvey-pi1-modeSelector-SCell
+	  TD.attribs = TD
+	}
+	modeSelector.ch.TD.ch.TD.ch.P < .P
+
+
+	browsebox = Browsing box
+	browsebox.selector = .tx-simplesurvey-pi1-browsebox
+	browsebox.example = <div class="tx-simplesurvey-pi1-browsebox"><p>Displaying results <span class="tx-simplesurvey-pi1-browsebox-strong">1 to 3</span> out of <span class="tx-simplesurvey-pi1-browsebox-strong">4</span></p><table><tr><td class="tx-simplesurvey-pi1-browsebox-SCell"><p><a HREF="#">Page 1 (S)</a></p></td><td><p><a HREF="#">Page 2</a></p></td><td><p><a HREF="#">Next ></a></p></td></tr></table></div>
+	browsebox.exampleStop = 1
+	browsebox.ch.P < .P
+	browsebox.ch.P.ch.strong = Emphasized numbers
+	browsebox.ch.P.ch.strong {
+	  selector = SPAN.tx-simplesurvey-pi1-browsebox-strong
+	  attribs = TEXT
+	}
+	browsebox.ch.TABLE = Table
+	browsebox.ch.TABLE.selector = TABLE
+	browsebox.ch.TABLE.attribs = TABLE
+	browsebox.ch.TD = Table cells
+	browsebox.ch.TD.selector = TD
+	browsebox.ch.TD.attribs = TD
+	browsebox.ch.TD.ch {
+	  TD = Selected table cells
+	  TD.selector = + .tx-simplesurvey-pi1-browsebox-SCell
+	  TD.attribs = TD
+	}
+	browsebox.ch.TD.ch.P < .P
+	browsebox.ch.TD.ch.TD.ch.P < .P
+
+
+	searchbox = Search box
+	searchbox.selector = .tx-simplesurvey-pi1-searchbox
+	searchbox.example = <div class="tx-simplesurvey-pi1-searchbox"><table><form action="#" method="POST"><tr><td><input type="text" name="tx_simplesurvey_pi1[sword]" value="Search word" class="tx-simplesurvey-pi1-searchbox-sword"></td><td><input type="submit" value="Search" class="tx-simplesurvey-pi1-searchbox-button"></td></tr></form></table></div>
+	searchbox.exampleStop = 1
+	searchbox.ch {
+		TABLE = Table
+		TABLE.selector = TABLE
+		TABLE.attribs = TABLE
+		TD = Table cells
+		TD.selector = TD
+		TD.attribs = TD
+		INPUT = Form fields
+		INPUT.selector = INPUT
+		INPUT.attribs = TEXT,background-color,width
+		INPUT.ch {
+			sword = Search word field
+			sword.selector = +.tx-simplesurvey-pi1-searchbox-sword
+			sword.attribs = TEXT,background-color,width
+
+			button = Submit button
+			button.selector = +.tx-simplesurvey-pi1-searchbox-button
+			button.attribs = TEXT,background-color,width
+		}
+	}
+	
+	list = List display
+	list.selector = .tx-simplesurvey-pi1-listrow
+	list.example = <div class="tx-simplesurvey-pi1-listrow"><table><tr class="tx-simplesurvey-pi1-listrow-header"><td nowrap><p>Time / Date:</p></td><td><p><a HREF="#">Title:</a></p></td></tr><tr><td valign="top"><p>25-08-02</p></td><td valign="top"><p><a HREF="#">New company name...</a></p></td></tr><tr class="tx-simplesurvey-pi1-listrow-odd"><td valign="top"><p>16-08-02</p></td><td valign="top"><p><a HREF="#">Yet another headline here</a></p></td></tr><tr><td valign="top"><p>05-08-02</p></td><td valign="top"><p><a HREF="#">The third line - even row</a></p></td></tr></table></div>
+	list.exampleStop = 1
+	list.ch {
+		TABLE = Table
+		TABLE.selector = TABLE
+		TABLE.attribs = TABLE
+		TD = Table cells
+		TD.selector = TD
+		TD.attribs = TD
+		TD_header = Header row cells
+		TD_header.selector = TR.tx-simplesurvey-pi1-listrow-header TD
+		TD_header.attribs = TD
+		TD_odd = Odd rows cells
+		TD_odd.selector = TR.tx-simplesurvey-pi1-listrow-odd TD
+		TD_odd.attribs = TD
+	}
+	list.ch.TD.ch.P < .P
+	list.ch.TD_header.ch.P < .P
+	list.ch.TD_odd.ch.P < .P
+	single = Single display
+	single.selector = .tx-simplesurvey-pi1-singleView
+	single.example = <div class="tx-simplesurvey-pi1-singleView"><H2>Header, if any:</H2><p>This is regular bodytext in the list display.</p><p>Viditque Deus cuncta quae fecit et erant valde bona et factum est vespere et mane dies sextus.</p><p><a href="#">Back</a></p></div>
+	single.exampleWrap = <div class="tx-simplesurvey-pi1-singleView"> | </div>
+	single.ch.P < .P
+	single.ch.P.exampleStop = 0
+	single.ch.P.ch {
+		
+		P_0 = [singleViewField-title]
+		P_0.selector = +.tx-simplesurvey-pi1-singleViewField-title
+		P_0.attribs = BODYTEXT
+		P_0.example = <p class="tx-simplesurvey-pi1-singleViewField-title">[singleViewField-title] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-title">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_0.exampleStop = 1
+		P_0.ch.links = < CSS_editor.ch.A
+		
+		
+		P_1 = [singleViewField-caption]
+		P_1.selector = +.tx-simplesurvey-pi1-singleViewField-caption
+		P_1.attribs = BODYTEXT
+		P_1.example = <p class="tx-simplesurvey-pi1-singleViewField-caption">[singleViewField-caption] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-caption">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_1.exampleStop = 1
+		P_1.ch.links = < CSS_editor.ch.A
+		
+		
+		P_2 = [singleViewField-description]
+		P_2.selector = +.tx-simplesurvey-pi1-singleViewField-description
+		P_2.attribs = BODYTEXT
+		P_2.example = <p class="tx-simplesurvey-pi1-singleViewField-description">[singleViewField-description] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-description">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_2.exampleStop = 1
+		P_2.ch.links = < CSS_editor.ch.A
+		
+		
+		P_3 = [singleViewField-questions]
+		P_3.selector = +.tx-simplesurvey-pi1-singleViewField-questions
+		P_3.attribs = BODYTEXT
+		P_3.example = <p class="tx-simplesurvey-pi1-singleViewField-questions">[singleViewField-questions] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-questions">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_3.exampleStop = 1
+		P_3.ch.links = < CSS_editor.ch.A
+		
+		
+		P_4 = [singleViewField-dependences]
+		P_4.selector = +.tx-simplesurvey-pi1-singleViewField-dependences
+		P_4.attribs = BODYTEXT
+		P_4.example = <p class="tx-simplesurvey-pi1-singleViewField-dependences">[singleViewField-dependences] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-dependences">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_4.exampleStop = 1
+		P_4.ch.links = < CSS_editor.ch.A
+		
+		
+		P_5 = [singleViewField-questiontext]
+		P_5.selector = +.tx-simplesurvey-pi1-singleViewField-questiontext
+		P_5.attribs = BODYTEXT
+		P_5.example = <p class="tx-simplesurvey-pi1-singleViewField-questiontext">[singleViewField-questiontext] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-questiontext">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_5.exampleStop = 1
+		P_5.ch.links = < CSS_editor.ch.A
+		
+		
+		P_6 = [singleViewField-submittext]
+		P_6.selector = +.tx-simplesurvey-pi1-singleViewField-submittext
+		P_6.attribs = BODYTEXT
+		P_6.example = <p class="tx-simplesurvey-pi1-singleViewField-submittext">[singleViewField-submittext] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-submittext">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_6.exampleStop = 1
+		P_6.ch.links = < CSS_editor.ch.A
+		
+		
+		P_7 = [singleViewField-template]
+		P_7.selector = +.tx-simplesurvey-pi1-singleViewField-template
+		P_7.attribs = BODYTEXT
+		P_7.example = <p class="tx-simplesurvey-pi1-singleViewField-template">[singleViewField-template] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-template">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_7.exampleStop = 1
+		P_7.ch.links = < CSS_editor.ch.A
+		
+		
+		P_8 = [singleViewField-mandatoryfielderror]
+		P_8.selector = +.tx-simplesurvey-pi1-singleViewField-mandatoryfielderror
+		P_8.attribs = BODYTEXT
+		P_8.example = <p class="tx-simplesurvey-pi1-singleViewField-mandatoryfielderror">[singleViewField-mandatoryfielderror] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-mandatoryfielderror">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_8.exampleStop = 1
+		P_8.ch.links = < CSS_editor.ch.A
+		
+		
+		P_9 = [singleViewField-receiptmails]
+		P_9.selector = +.tx-simplesurvey-pi1-singleViewField-receiptmails
+		P_9.attribs = BODYTEXT
+		P_9.example = <p class="tx-simplesurvey-pi1-singleViewField-receiptmails">[singleViewField-receiptmails] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-receiptmails">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_9.exampleStop = 1
+		P_9.ch.links = < CSS_editor.ch.A
+		
+		
+		P_10 = [singleViewField-todb]
+		P_10.selector = +.tx-simplesurvey-pi1-singleViewField-todb
+		P_10.attribs = BODYTEXT
+		P_10.example = <p class="tx-simplesurvey-pi1-singleViewField-todb">[singleViewField-todb] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-todb">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_10.exampleStop = 1
+		P_10.ch.links = < CSS_editor.ch.A
+		
+		
+		P_11 = [singleViewField-targetpage]
+		P_11.selector = +.tx-simplesurvey-pi1-singleViewField-targetpage
+		P_11.attribs = BODYTEXT
+		P_11.example = <p class="tx-simplesurvey-pi1-singleViewField-targetpage">[singleViewField-targetpage] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-targetpage">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_11.exampleStop = 1
+		P_11.ch.links = < CSS_editor.ch.A
+		
+		
+		P_12 = [singleViewField-userdata]
+		P_12.selector = +.tx-simplesurvey-pi1-singleViewField-userdata
+		P_12.attribs = BODYTEXT
+		P_12.example = <p class="tx-simplesurvey-pi1-singleViewField-userdata">[singleViewField-userdata] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-userdata">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_12.exampleStop = 1
+		P_12.ch.links = < CSS_editor.ch.A
+		
+		
+		P_13 = [singleViewField-affirmationmail]
+		P_13.selector = +.tx-simplesurvey-pi1-singleViewField-affirmationmail
+		P_13.attribs = BODYTEXT
+		P_13.example = <p class="tx-simplesurvey-pi1-singleViewField-affirmationmail">[singleViewField-affirmationmail] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-affirmationmail">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_13.exampleStop = 1
+		P_13.ch.links = < CSS_editor.ch.A
+		
+		
+		P_14 = [singleViewField-mailfield]
+		P_14.selector = +.tx-simplesurvey-pi1-singleViewField-mailfield
+		P_14.attribs = BODYTEXT
+		P_14.example = <p class="tx-simplesurvey-pi1-singleViewField-mailfield">[singleViewField-mailfield] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-mailfield">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_14.exampleStop = 1
+		P_14.ch.links = < CSS_editor.ch.A
+		
+		
+		P_15 = [singleViewField-mailsubject]
+		P_15.selector = +.tx-simplesurvey-pi1-singleViewField-mailsubject
+		P_15.attribs = BODYTEXT
+		P_15.example = <p class="tx-simplesurvey-pi1-singleViewField-mailsubject">[singleViewField-mailsubject] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-mailsubject">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_15.exampleStop = 1
+		P_15.ch.links = < CSS_editor.ch.A
+		
+		
+		P_16 = [singleViewField-sendersmail]
+		P_16.selector = +.tx-simplesurvey-pi1-singleViewField-sendersmail
+		P_16.attribs = BODYTEXT
+		P_16.example = <p class="tx-simplesurvey-pi1-singleViewField-sendersmail">[singleViewField-sendersmail] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-sendersmail">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_16.exampleStop = 1
+		P_16.ch.links = < CSS_editor.ch.A
+		
+		
+		P_17 = [singleViewField-mailcontent]
+		P_17.selector = +.tx-simplesurvey-pi1-singleViewField-mailcontent
+		P_17.attribs = BODYTEXT
+		P_17.example = <p class="tx-simplesurvey-pi1-singleViewField-mailcontent">[singleViewField-mailcontent] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-mailcontent">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_17.exampleStop = 1
+		P_17.ch.links = < CSS_editor.ch.A
+		
+		
+		P_18 = [singleViewField-goodbyetext]
+		P_18.selector = +.tx-simplesurvey-pi1-singleViewField-goodbyetext
+		P_18.attribs = BODYTEXT
+		P_18.example = <p class="tx-simplesurvey-pi1-singleViewField-goodbyetext">[singleViewField-goodbyetext] text <a href="#">with a link</a> in it.</p><p class="tx-simplesurvey-pi1-singleViewField-goodbyetext">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</p>
+		P_18.exampleStop = 1
+		P_18.ch.links = < CSS_editor.ch.A
+	}
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_simplesurvey_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="listFieldHeader_title">Title</label>
+			<label index="listFieldHeader_caption">Caption</label>
+			<label index="listFieldHeader_description">Description</label>
+			<label index="listFieldHeader_questions">Questions</label>
+			<label index="listFieldHeader_dependences">Dependences</label>
+			<label index="listFieldHeader_questiontext">Text of numeration</label>
+			<label index="listFieldHeader_submittext">Text for submit button</label>
+			<label index="listFieldHeader_template">Template</label>
+			<label index="listFieldHeader_mandatoryfielderror">Mandatory field error text</label>
+			<label index="listFieldHeader_showresults">Show survey results in the frontend</label>
+			<label index="listFieldHeader_receiptmails">Survey result to following e-mails</label>
+			<label index="listFieldHeader_todb">Save survey result to database</label>
+			<label index="listFieldHeader_targetpage">Target page</label>
+			<label index="listFieldHeader_userdata">User data</label>
+			<label index="listFieldHeader_affirmationmail">Affirmation mail</label>
+			<label index="listFieldHeader_mailfield">Field inluding the e-mail</label>
+			<label index="listFieldHeader_mailsubject">Mail subject</label>
+			<label index="listFieldHeader_sendersmail">Senders mail</label>
+			<label index="listFieldHeader_sendersname">Senders name</label>
+			<label index="listFieldHeader_mailcontent">Mail content</label>
+			<label index="listFieldHeader_goodbyetext">Good bye text</label>
+			<label index="listFieldHeader_results">Results</label>
+			<label index="uploadfile_size">The file ###FILE### is to big!</label>
+			<label index="uploadfile_invalid">The type of the file ###FILE### is not allowed!</label>
+			<label index="uploadfile_error">There occured an error with the upload of the file ###FILE###!</label>
+			<label index="uploadfile_uploaderror">There was an error when uploading the file ###FILE###!</label>
+			<label index="showResult">Show results</label>
+			<label index="noResult">Not available!</label>
+			<label index="noAnswer">No answer filled in yet!</label>
+			<label index="noTemplate">No template found... Please contact the administrator!</label>
+			<label index="resultsNotAllowed">The result page has been disabled for this survey!</label>
+			<label index="recursion">Attention!\nTo avoid recursion, the loop will be canceled.\nPlease check your dependences in the backend!</label>
+			<label index="back">Back</label>
+			<label index="userdata">User data</label>
+			<label index="survey">Survey</label>
+			<label index="points">points</label>
+			<label index="overallpoints">Overall points:</label>
+			<label index="submit">Submit</label>
+			<label index="receivedfiles">Received files:</label>
+			<label index="pi_list_browseresults_prev">&lt; Previous</label>
+			<label index="pi_list_browseresults_page">Page</label>
+			<label index="pi_list_browseresults_next">Next &gt;</label>
+			<label index="pi_list_browseresults_displays">Displaying surveys ###SPAN_BEGIN###%s to %s&lt;/span&gt; out of ###SPAN_BEGIN###%s&lt;/span&gt;</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="listFieldHeader_title">Titel</label>
+			<label index="listFieldHeader_caption">Untertitel</label>
+			<label index="listFieldHeader_description">Beschreibung</label>
+			<label index="listFieldHeader_questions">Fragen</label>
+			<label index="listFieldHeader_dependences">Abhängigkeiten</label>
+			<label index="listFieldHeader_questiontext">Text der Aufzählung</label>
+			<label index="listFieldHeader_submittext">Text für den Absendebutton</label>
+			<label index="listFieldHeader_template">Vorlage</label>
+			<label index="listFieldHeader_mandatoryfielderror">Pflichtfeld Fehlertext</label>
+			<label index="listFieldHeader_showresults">Umfrageergebnisse im Frontend anzeigen</label>
+			<label index="listFieldHeader_receiptmails">Umfrageergebnis an folgende E-Mails</label>
+			<label index="listFieldHeader_todb">Umfrageergebnis in Datenbank speichern</label>
+			<label index="listFieldHeader_targetpage">Zielseite</label>
+			<label index="listFieldHeader_userdata">Benutzerdaten</label>
+			<label index="listFieldHeader_affirmationmail">Bestätigungsmail</label>
+			<label index="listFieldHeader_mailfield">Feld der E-Mail-Adresse</label>
+			<label index="listFieldHeader_mailsubject">Mailbetreff</label>
+			<label index="listFieldHeader_sendersmail">Absendermail</label>
+			<label index="listFieldHeader_sendersname">Absendername</label>
+			<label index="listFieldHeader_mailcontent">Mailinhalt</label>
+			<label index="listFieldHeader_goodbyetext">Abschiedstext</label>
+			<label index="listFieldHeader_results">Ergebnisse</label>
+			<label index="uploadfile_size">Die Datei ###FILE### ist zu groß!</label>
+			<label index="uploadfile_invalid">Das Format der Datei ###FILE### ist nicht erlaubt!</label>
+			<label index="uploadfile_error">Es ist ein Fehler beim Hochladen der Datei ###FILE### aufgetreten!</label>
+			<label index="uploadfile_uploaderror">Fehler beim hochladen der Datei ###FILE###!</label>
+			<label index="showResult">Auswertung anzeigen</label>
+			<label index="noResult">Nicht verfügbar!</label>
+			<label index="noAnswer">Noch keine Antwort eingetragen!</label>
+			<label index="noTemplate">Template nicht gefunden... Bitte kontaktieren Sie den Administrator!</label>
+			<label index="resultsNotAllowed">Die Ergebnisanzeige wurde für diese Umfrage deaktiviert!</label>
+			<label index="recursion">Achtung!\nUm eine Endlosschleife durch Rekursion zu verhindern, wird jetzt abgebrochen.\nBitte überprüfen Sie ihre Abfragebedingungen im Backend!</label>
+			<label index="back">Zurück</label>
+			<label index="userdata">Benutzerdaten</label>
+			<label index="survey">Umfrage</label>
+			<label index="points">Punkte</label>
+			<label index="overallpoints">Gesamtpunktzahl:</label>
+			<label index="submit">Absenden</label>
+			<label index="receivedfiles">Empfangene Dateien:</label>
+			<label index="pi_list_browseresults_prev">&lt; zurück</label>
+			<label index="pi_list_browseresults_page">Seite</label>
+			<label index="pi_list_browseresults_next">weiter &gt;</label>
+			<label index="pi_list_browseresults_displays">Umfragen ###SPAN_BEGIN###%s bis %s&lt;/span&gt; von ###SPAN_BEGIN###%s&lt;/span&gt;</label>
+		</languageKey>
+	</data>
+</T3locallang>

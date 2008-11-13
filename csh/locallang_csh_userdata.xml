@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>CSH labels for the userdata</description>
+		<type>CSH</type>
+		<csh_table></csh_table>
+		<fileId>EXT:simplesurvey/csh/locallang_csh_userdata.xml</fileId>
+		<labelContext type="array"></labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+		    <label index="type.description">Set the type to one of the usual form fields you want the answer method to get.</label>
+            <label index="title.description">Type in the information you want from the user.</label>
+            <label index="mandatory.description">You can define if the question should be a mandatory question. Else it can be left blank in the survey. When you have checkboxes, every box must be marked in the survey!</label>
+			<label index="size.description">Defines the size of the selectorbox. Valid sizes are 1-9! Values smaller than 1 will get the size 1 and sizes greater than 9 will get the size 9.</label>
+            <label index="options.description">Set the answers. Cick on the ?-icon to get detailed informations what to insert here!</label>
+			<label index="options.details">DropDown, Radio, Checkbox: Each line will be one answer, if one line starts with @ this line will be set as default selected/checked. If you set more than one @ value in the DropDown or Radio, the last one will be marked. If you don't set a @ value in the DropDown, the first value it marked.
+			
+			Text, Textarea: If one line starts with @ this line will be inserted as default. If you don't write a @ sign, this content will be inserted in the text/textarea tag! This can be used to set the size or a class (cols="30" rows="20")...
+			
+			Static text: Insert ANY text you want! You can also use HTML-Tags like bold, italic, div, ... This is useful if you want to insert a small explanation or an image. Also you can insert JS-scripts etc.
+			
+			Upload: When you insert a upload field, you can specify the maximum file size in bytes. It is marked with an @! For example @100000 will limit the file size to 100kb. Next you have to specify the allowed file types! Here you simply insert the valid MIME-Types separated by a line break. For example text/plain will limit the file types to simple txt-files. A list of valid MIME-Types can be found here: http://de.selfhtml.org/diverses/mimetypen.htm
+			
+			Example 1 (use with type text area): A text area with two lines of standard text and a size of width=30 and height=20:
+			@This is the first line of the textarea
+			cols="30"
+			rows="20"
+			@This is the second line of the standard text. Both lines will be inserted by default.
+			
+			Example 2 (use with type upload field): A upload field where only txt, pdf and word files which are smaller than 100kb can be uploaded:
+			@100000
+			text/plain
+			application/pdf
+			applicaton/msword
+			</label>
+			<label index="mandatoryrules.description">Set the rules if it is a mandatory field. Cick on the ?-icon to get detailed informations what to insert here!</label>
+			<label index="mandatoryrules.details">DropDown, Radio: Each line contains one answer-text, which should be mandatory be selected/choosed. Because in a DropDown-field and in Radio Buttons you can only select one answer, one answer in a line is allowed!
+			The mandatory-field will fail if an answer is choosen, which is not listed in this field!
+			
+			Example (use with type Radio): Only "Yes" or "Maybe" are accepted answers. If there is another answer-option "No" is selected it will fail! It will also fail if nothing is selected!
+			Yes
+			Maybe
+			</label>
+            <label index="fieldinformation.description">You can insert an information text which will be displayed when the user clicks on the "?" near the current question. If it is blank the "?" will be hidden.</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+		    <label index="type.description">Hier stellen sie den Typ der Antworten ein. Es sind die Standardformularfelder vorhanden.</label>
+            <label index="title.description">Hier schreiben Sie rein, welche Informationen Sie vom Benutzer haben wollen.</label>
+            <label index="mandatory.description">Sie können festlegen, ob die Frage ein Pflichteld sein soll. Andernfalls kann die Antwort in der Umfrage leer gelassen werden. Bei Checkboxen müssen dann alle Checkboxen ausgewählt werden!</label>
+            <label index="size.description">Definiert die Größe des Auswahlfeldes. Erlaubte Werte sind 1-9! Werte die kleiner als 1 sind bekommen die Größe 1 und Werte die größer sind als 9 bekommen die Größe 9.</label>
+			<label index="options.description">Die Antwortmöglichkeiten festlegen. Klicken Sie auf das Hilfe-Icon um genaue Angaben zu erhalten, was Sie hier reinschreiben müssen!</label>
+			<label index="options.details">DropDown, Radio, Checkbox: In jeder Zeile steht eine Antwort, wenn eine Zeile mit einem @ anfängt, wird diese Anwort standardmäßig markiert/ausgewählt sein. Wenn Sie mehr als eine Zeile mit @ beim Typen DropDown/Radio starten, wird die letzte Zeile ausgewählt sein. Wenn Sie bei einer DropDown Liste kein @ angeben, wird die erste Antwort makiert.
+			
+			Text, Textarea: Wenn eine Zeile mit einem @ beginnt, wird der Text als Startwert erscheinen. Wenn Sie kein @ vor die Zeile schreiben, wird der Text im text/textarea tag drin stehen! Dies kann benutzt werden, um Eigenschaften und Klassen festzulegen (cols="30" rows="20")...
+			
+			Static text: Fügen Sie BELIEBIGEN Text ein! Sie können auch HTML-Tags wie bold, italic, div, ... verwenden. Dies ist praktisch, wenn Sie eine kurze Beschreibung oder ein Bild einfügen wollen. Sie können auch JS-Scripts etc. einfügen.
+			
+			Upload: Wenn Sie ein upload field einfügen, können Sie die Uploadgröße der Datei in Bytes beschränken. Diese Zeile wird mit einem @ markiert! Zum Beispiel wird @100000 die Dateigröße auf 100kb beschränken. Als nächstes müssen Sie die erlaubten Dateitypen definieren! Dazu fügen Sie einfach die entsprechenden MIME-Types durch Zeilenumbrüche getrennt ein. Zum Beispiel wird text/plain den Dateityp auf einfache txt-Dateien beschränken. Eine Liste gültiger MIME-Types finden Sie hier: http://de.selfhtml.org/diverses/mimetypen.htm
+			
+			Beispiel 1 (für den Typen text area): Eine text area mit zwei Zeilen Standardtext und der Größe 30x20:
+			@This is the first line of the textarea
+			cols="30"
+			rows="20"
+			@This is the second line of the standard text. Both lines will be inserted by default.
+			
+			Beispiel 2 (für den Typen upload field): Ein upload field wo nur txt, pdf und word Dateien, die kleiner als 100kb sind, hochgeladen werden können:
+			@100000
+			text/plain
+			application/pdf
+			applicaton/msword
+			</label>
+			<label index="mandatoryrules.description">Definieren Sie die Pflichtfeld-Regeln, falls es sich um ein Pflichfeld handelt. Klicken Sie auf das Hilfe-Icon um genaue Angaben zu erhalten, was Sie hier reinschreiben müssen!</label>
+			<label index="mandatoryrules.details">DropDown, Radio: Jede Zeile enthält eine Antwort, welche ausgewählt werden muss. Da beim DropDown und beim RadioButton nur eine Auswahl getroffen werden kann, ist nur eine Antwort pro Zeile erlaubt!
+			Das Pflichtfeld ist nicht erfüllt, wenn eine Antwort ausgewählt wurde, die nicht in dieser Liste aufgeführt ist!
+			
+			Beispiel (für den Typen Radio): Nur "Yes" oder "Maybe" sind erlaubte Antworten. Wenn eine andere Antwortmöglichkeit "No" ausgewählt ist, wird das Absenden fehlschlagen! Es wird auch fehlschlagen, wenn nichts ausgewählt ist!
+			Yes
+			Maybe
+			</label>
+            <label index="fieldinformation.description">Hier können Sie einen kurzen Hilfstext eingeben, welcher erscheint, wenn der Benutzer auf das Hilfe-Symbol neben der Frage klickt. Wenn hier nichts drin steht, erscheint das Hilfe-Symbol nicht.</label>
+		</languageKey>
+	</data>
+</T3locallang>

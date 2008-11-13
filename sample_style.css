@@ -1,0 +1,115 @@
+.tx-simplesurvey-pi1{
+	padding: 10px;
+	margin: 10px;
+	width: 500px;
+	background:lightBlue none repeat scroll 0% 0%;
+	border:1px solid;
+}
+.tx-simplesurvey-pi1-notemplate{
+	background:lightCoral none repeat scroll 0% 0%;
+	border:2px dashed;
+	font-size:16px;
+	margin:10px;
+	padding:30px;
+}
+.tx-simplesurvey-pi1-title, .tx-simplesurvey-pi1-result-header-questions{
+	text-decoration: underline;
+	margin: 0 0 10px 0;
+	text-align: right;
+	font-size: 20px;
+	font-weight: bold;
+}
+.tx-simplesurvey-pi1-caption{
+	color: grey;
+	font-size: 16px;
+	text-align: right;
+}
+.tx-simplesurvey-pi1-description{
+	color: black;
+	padding: 2px 0 10px 0;
+	border-bottom: 1px solid black;
+}
+.tx-simplesurvey-pi1-questiontext{
+	font-weight:bold;
+	text-decoration: underline;
+	margin: 10px 0 2px 0;
+	padding:2px 0 3px 0;
+	text-align: center;
+	background-color: DarkKhaki;
+}
+.tx-simplesurvey-pi1-help{
+	left:490px;
+	width: 10px;
+	position:relative;
+	top:-18px;
+	margin:0 0 -14px 0;
+}
+.tx-simplesurvey-pi1-help a{
+	font-size: 12px;
+	text-decoration:none;
+}
+.tx-simplesurvey-pi1-help a:hover, .tx-simplesurvey-pi1-help a.hover{
+	font-weight: bold;
+}
+.tx-simplesurvey-pi1-question, .tx-simplesurvey-pi1-result-question{
+	font-size: 14px;
+	margin: 0 0 5px 0;
+	color: black;
+}
+.tx-simplesurvey-pi1-answer{
+	color: black;
+}
+#tx-simplesurvey-pi1-error{
+	display: none;
+	width: 250px;
+	margin: 5px 0 5px 0;
+	background-color: #FF4626;
+	color: white;
+	border: 1px solid black;
+}
+.tx-simplesurvey-pi1-userdata{
+	margin: 10px 0 10px 0;
+	border: 2px dashed white;
+	padding: 3px;
+}
+.tx-simplesurvey-pi1-userdata-title{
+	font-weight: bold;
+	margin: 5px 0 0 0;
+}
+.tx-simplesurvey-pi1-userdata-answer{
+	margin: 5px 0 0 0;
+}
+.tx-simplesurvey-pi1-submit{
+	background:lightBlue none repeat scroll 0% 0%;
+	border:1px solid;
+	float:right;
+}
+.tx-simplesurvey-pi1-results-not-allowed{
+	font-size:14px;
+	font-weight:bold;
+}
+.tx-simplesurvey-pi1-uploaderror{
+	background:red none repeat scroll 0% 0%;
+	border:1px solid;
+}
+.tx-simplesurvey-pi1-result-percent{
+	font-size:12px;
+	margin:0pt 0pt 0pt 5px;
+	font-style:italic;
+}
+.tx-simplesurvey-pi1-result-answer{
+	font-size:12px;
+	margin:0pt 0pt 0pt 5px;
+}
+.tx-simplesurvey-pi1-result-noanswer{
+	font-style:italic;
+	color: gray;
+}
+.tx-simplesurvey-pi1-result-userdata{
+}
+.tx-simplesurvey-pi1-overall-points{
+	font-size:11px;
+	font-weight:bold;
+	text-align:right;
+	text-decoration:underline;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>module</type>
+        <description>Language labels for module 'simplesurvey'</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="title">SimpleSurvey results</label>
+			<label index="noresults">No results</label>
+			<label index="choose">.:Choose a survey:.</label>
+			<label index="choosesingle">.:Choose a single result:.</label>
+			<label index="mostanswers">most answers</label>
+			<label index="fewestanswers">fewest answers</label>
+			<label index="alphabeticalanswers">alphabetical sorted answers</label>
+			<label index="appearanceanswers">appearance in the survey</label>
+			<label index="csvexport">CSV export</label>
+			<label index="all">All</label>
+			<label index="allquestions">All answers</label>
+			<label index="alluser">All user data</label>
+			<label index="last">Last result</label>
+			<label index="single">Single result</label>
+			<label index="back">Back to result view</label>
+        </languageKey>
+		<languageKey index="de" type="array">
+            <label index="title">SimpleSurvey Ergebnisse</label>
+			<label index="noresults">Keine Ergebnisse</label>
+			<label index="choose">.:Umfrage auswählen:.</label>
+			<label index="choosesingle">.:Einzelnes Ergebnis auswählen:.</label>
+			<label index="mostanswers">meisste Antworten</label>
+			<label index="fewestanswers">wenigste Antworten</label>
+			<label index="alphabeticalanswers">Antworten alphabetisch sortiert</label>
+			<label index="appearanceanswers">wie in der Umfrage</label>
+			<label index="csvexport">CSV-Export</label>
+			<label index="all">Alle</label>
+			<label index="allquestions">Alle Antworten</label>
+			<label index="alluser">Alle Benutzerdaten</label>
+			<label index="last">Letztes Ergebnis</label>
+			<label index="single">Einzelnes Ergebnis</label>
+			<label index="back">Zurück zur Ergebnisansicht</label>
+        </languageKey>
+    </data>
+</T3locallang>

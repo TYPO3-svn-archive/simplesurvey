@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>CSH labels for the surveys</description>
+		<type>CSH</type>
+		<csh_table></csh_table>
+		<fileId>EXT:simplesurvey/csh/locallang_csh_surveys.xml</fileId>
+		<labelContext type="array"></labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+		    <label index="title.description">Set the title of the survey.</label>
+            <label index="caption.description">Set a small caption.</label>
+            <label index="description.description">Set a larger desciption of the survey for the user.</label>
+            <label index="questions.details">Add questions to the survey (you have to create the questions first and then insert them here).</label>
+            <label index="dependences.description">Create dependences of question. For example if question2 should only be visible if question1 has the answer "yes". Click on the ?-icon for more details!</label>
+			<label index="dependences.details">"question2 > question1 = Yes;Maybe" without quotes means that the question with the id 2 only appears if the question with the id 1 is "Yes" or "Maybe".
+			Multiple answers are separated by a ;
+			The answers must be exactly like the answer which is written in the answer field of the question!
+			One dependence per line!
+			"userdata" instead of "question" for the user data fields!
+			Do not make a space between the "question" and the ID-number!
+			You can not write "question2;question3 > question1 = Yes;Maybe".
+			Hint: You can read it like "the question with the id 2 appears if the question with the id 1 is Yes or Maybe".</label>
+			<label index="pointssystem.description">Activate the pointing system if you want to create a test and each question can get a number of points.</label>
+			<label index="points.description">Insert the pointing-rules here. Click on the ?-icon for more details!</label>
+			<label index="points.details">“question1 = Berlin > 5” without quotes means that the user gets 5 points if he answers the question with the id 1 with “Berlin”.
+			Multiple answers are separated by a ; All listed answers then will get 5 points in the example above...
+			One point allocation per line! If "Berlin" should get 5 points and "Delmenhorst" 10, you have to write these in two lines (one for the 5 points and one for the 10 points).
+			If a question is not listed here, it will be ignored in the pointing system (no points for any answer).
+			
+			Here a simple example (question1: What number has PI?):
+			question1 = 3.14 > 5
+			question1 = 3.1 > 4
+			question1 = 3 > 2
+			If a user types in 3.14 he gets 5 points. If he types in 4 he will get 0 points because it is not listed! You can also set negative values!
+			</label>
+			<label index="showquestionpoints.description">You can define if the number of possible points are shown after each question.</label>
+			<label index="showpointsforuser.description">You can define if the user will get an overview of his attained points when he finished the survey (in the results and the email).</label>
+			<label index="questiontext.description">In this field you can set the text of the numeration. Click the ?-icon for more details!</label>
+			<label index="questiontext.details">For example "Question #:" (without quotes) will be shown as "Question 1:" etc. So the # will be replaced by the current question number.
+			If no # is found, the number will be placed at the end.
+			If you leave it blank a single number will be shown.</label>
+			<label index="submittext.description">Set the title for the submit button. If you leave it blank a standard text will be used!</label>
+			<label index="template.description">You can set your own html-template for the look of the survey. Else the default-template.html will be taken - take a look at the Template chapter in the manual if you want to see, how to set up your own template!</label>
+			<label index="mandatoryfielderror.description">You can set a short text which will appear, if a mandatory field is not filled. If you leave it blank, no information text will appear to the user!</label>
+			<label index="showresults.description">You can choose if the survey results should be available in the frontend or not.</label>
+			<label index="showdeletedresults.description">Here you can say that questions which are not anymore in the survey (deleted, took out of the survey), will not be displayed in the results. Else these old question answers will be shown!</label>
+			<label index="receiptmails.description">You can add mails where the result of the survey will be sent to (website administrators, directors, ...). Separate the mails by a simple linebreak - each line should only contain one email!</label>
+			<label index="receiptmailsubject.description">Type in the mail subject if you inserted mails in the "receipt mails" field!</label>
+			<label index="receiptsendersmail.description">Type in the senders mail if you inserted mails in the "receipt mails" field!</label>
+			<label index="receiptsendersname.description">Type in the senders name if you inserted mails in the "receipt mails" field!</label>
+			<label index="receiptmailtemplate.description">Here you can upload a HTML-template for the mails in the "receipt mails" field! Use ###CONTENT### in the text if you want to fill in the survey result there.</label>
+			<label index="receiptmailcontent.description">Type in the content of the mail if you inserted mails in the "receipt mails" field! Use ###CONTENT### in the text if you want to fill in the survey result there. If you don't you don't see the survey result in the mail! If you use a HTML-template this field can be ignored!</label>
+			<label index="todb.description">If you want to save the results to the database you can check this field. (recommend)</label>
+			<label index="targetpage.description">The target-page is the page where the user will be sent to, when he submits the form. This should only be a page id (123) or a website (http://www.yourpage.com/thanks.html)! If it's blank he will get to a page with the "good bye text" which is defined in the next field!</label>
+			<label index="goodbyetext.description">The "good bye text" will be shown if the user filled out a survey and no target page is defined (previous point) (use ###CONTENT### in the text if you want the user to show the results he filled in)!</label>
+			<label index="userdata.description">You can add some userdata-fields - this can be for example the users lastname, his email, company, etc. (to use this, the user data fields have to be created like the questions). User data will not be shown in the frontend! Use this for personal questions!</label>
+			<label index="affirmationmail.description">If you have set a user data field with the users e-mail you can send him an affirmation-mail by checking this box.</label>
+			<label index="mailfield.description">If the previous box is checked you have to set the field, where the mail will be filled in (e.g. the e-mail field) by the user.</label>
+			<label index="mailsubject.description">Type in the mail subject if you want to send an affirmation mail!</label>
+			<label index="sendersmail.description">Type in the senders mail if you want to send an affirmation mail!</label>
+			<label index="sendersname.description">Type in the senders name if you want to send an affirmation mail!</label>
+			<label index="mailtemplate.description">Here you can upload a HTML-template for the affirmation mail! Use ###CONTENT### in the text if you want to fill in the survey result there.</label>
+			<label index="mailcontent.description">Type in the content of the mail if you want to send an affirmation mail! Use ###CONTENT### in the text if you want to fill in the survey result there. If you don't the user don't see the survey result in the mail! If you use a HTML-template this field can be ignored!</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+		    <label index="title.description">Titel der Umfrage.</label>
+            <label index="caption.description">Ein kurzer Untertitel.</label>
+            <label index="description.description">Eine längere Beschreibung der Umfrage für den Benutzer.</label>
+            <label index="questions.details">Fgen Sie er Umfrage Fragen hinzu (zuvor müssen Sie die Fragen erstellt haben).</label>
+            <label index="dependences.description">Abhängigkeiten verschiedener Fragen erstellen. Zum Beispiel wenn question2 nur sichtbar sein soll, wenn question1 mit "yes" beantwortet wurde. Klicken Sie auf das ?-Icon für mehr Details was Sie hier reinschreiben können!</label>
+			<label index="dependences.details">"question2 > question1 = Yes;Maybe" ohne die Gänsefüßchen heisst, dass die Frage mit der id 2 nur escheint, wenn die Frage mit der id 1 nur mit "Yes" oder "Maybe" beantwortet wurde.
+			Mehrere Antworten werden durch ein ; getrennt
+			Die Antworten müssen genauso geschrieben werden, wie die Antworten im Antworten-Feld der Fragen!
+			Eine Abhängigkeit pro Zeile!
+			"userdata" anstatt "question" für die Benutzerdaten-Felder!
+			Machen Sie kein Leerzeichen zwischen "question" und der ID-Nummer!
+			Sie können nicht "question2;question3 > question1 = Yes;Maybe" schreiben.
+			Hinweis: Sie können es so lesen "Die Frage mit der ID 2 erscheint, wenn die Frage mit der ID 1 gleich Yes oder Maybe ist".</label>
+			<label index="pointssystem.description">Aktivieren Sie das Punktesystem wenn Sie einen Test erstellen wollen und die Fragen Punkte zugewiesen bekommen sollen.</label>
+			<label index="points.description">Schreiben Sie hier die Punkte-Regelung rein. Klicken Sie auf das ?-Icon für mehr Informationen!</label>
+			<label index="points.details">“question1 = Berlin > 5” ohne Gänsefüßchen heisst, dass der Benutzer 5 Punkte bekommt, wenn er die Frage mit der ID 1 mit "Berlin" beantwortet.
+			Mehrere Antworten werden durch ein ; getrennt. Im obigen Beispiel würden also alle hingeschriebenen Antworten 5 Punkte erhalten...
+			Eine Punktevergabe pro Zeile! Wenn die Antwort "Berlin" 5 Punkte und "Delmenhorst" 10 Punkte bekommen sollen, dann erfordert dies zwei Zeilen (eine für die 5 Punkte und eine für die 10 Punkte).
+			Wenn eine Frage keine Punktezuweisung erhält, wird diese Frage im Punktesystem ignoriert (es gibt keine Punkte für die Antworten).
+			
+			Hier ein einfaches Beispiel (question1: Wie groß ist PI?):
+			question1 = 3.14 > 5
+			question1 = 3.1 > 4
+			question1 = 3 > 2
+			Wenn ein Benutzer 3.14 wählt bekommt er 5 Punkte. Wenn er 4 wählt bekommt er keine Punkte, da diese Antwort nicht definiert ist! Sie können auch negative Punkte vergeben!
+			</label>
+			<label index="showquestionpoints.description">Sie können festlegen, ob die möglichen Punktzahlen hinter der Frage angezeigt werden sollen, oder nicht.</label>
+			<label index="showpointsforuser.description">Sie können festlegen, dass der Benutzer beim Abschicken der Umfrage/des Tests sehen soll, wie viele Punkte er erreicht hat (im Ergebnis und in der E-Mail an den Benutzer).</label>
+			<label index="questiontext.description">In diesem Feld können Sie den Text für die Aufzählung festlegen. Klicken Sie auf das ?-Icon für genauere Details!</label>
+			<label index="questiontext.details">"Question #:" (ohne Gänsefüßchen) würde zum Beispiel "Question 1:" etc. ausgeben. Die # wird also durch die Zahl der aktuellen Frage ersetzt.
+			Wenn keine # gefunden wurde, wird die Zahl am Ende eingefügt.
+			Wenn Sie das Feld leer lassen, wird nur die einzelne Zahl erscheinen.</label>
+			<label index="submittext.description">Definieren Sie den Text des Submit-Buttons. Wenn Sie es leer lassen, wird ein Standardtext benutzt!</label>
+			<label index="template.description">Sie können Ihre eigene HTML-Vorlage benutzen, um die Anordnung innerhalb der Umfrage zu beeinflussen. Andernfalls wird die default-template.html benutzt - schauen Sie in das Tempate-Kapitel im Manual, um zu sehen, wie Sie Ihr eigenes Template erstellen!</label>
+			<label index="mandatoryfielderror.description">Sie können einen kurzen Text definieren, der erscheint, wenn ein Pflichfeld nicht ausgefüllt ist. Wenn Sie es leer lassen, wird kein Hinweistext den Benutzer informieren!</label>
+			<label index="showresults.description">Sie können festlegen, ob die Ergebnisse der Umfrage im Frontend sichtbar sein sollen, oder nicht.</label>
+			<label index="showdeletedresults.description">Hier können Sie festlegen, ob Fragen, die nicht mehr in der Umfrage vorhanden sind (gelöscht, aus der Umfrage entfernt), auch nicht mehr angezeigt werden sollen. Andernfalls werden die Antworten auf die entfernten Fragen angezeigt!</label>
+			<label index="receiptmails.description">Hier können Sie E-Mail-Adressen eintragen (vom Administrator, Chef, Sie selbst...) an die das Ergebnis geschickt wird. Tragen Sie in jede Zeile nur eine E-Mail ein - Sie können sie durch Zeilenumbrüche trennen!</label>
+			<label index="receiptmailsubject.description">Tragen Sie hier den Betreff der E-Mail ein, wenn Sie im obigen Feld E-Mails eingetragen haben!</label>
+			<label index="receiptsendersmail.description">Tragen Sie hier die Absender-Mail der E-Mail ein, wenn Sie im obigen Feld E-Mails eingetragen haben!</label>
+			<label index="receiptsendersname.description">Tragen Sie hier den Absendernamen der E-Mail ein, wenn Sie im obigen Feld E-Mails eingetragen haben!</label>
+			<label index="receiptmailtemplate.description">Laden Sie hier eine HTML-Vorlage hoch, die den obigen Mails dient! Benutzen Sie ###CONTENT### als Text, wenn das Ergebnis der Umfrage erscheinen soll.</label>
+			<label index="receiptmailcontent.description">Tragen Sie hier den Inhalt der E-Mail ein, wenn Sie im obigen Feld E-Mails eingetragen haben! Benutzen Sie ###CONTENT### dort im Text, wo das Ergebnis der Umfrage erscheinen soll. Wenn Sie dies nicht tun, werden Sie in der E-Mail nicht sehen, wie die Eingaben des Benutzers waren! Wenn eine HTML-Vorlage benutzt wird, wird dieses Feld ignoriert!</label>
+			<label index="todb.description">Wenn Sie die Ergebnisse der Umfrage in der Datenbank speichern wollen, wählen Sie diese Option. (empfohlen)</label>
+			<label index="targetpage.description">Die Zielseite ist die Seite, wo der Benutzer hingeleitet wird, wenn er die Umfrage abschickt. Dies sollte nur eine Seiten-ID (123) oder eine Webseite (http://www.yourpage.com/thanks.html) sein! Wenn Sie dieses Feld leer lassen, wird er auf eine Seite weitergeleitet, auf der der Text aus dem Abschiedstext-Feld erscheint, welchen Sie im nächsten feld definieren können!</label>
+			<label index="goodbyetext.description">Der Verabschiedungstext wird angezeigt, wenn der Benutzer die Umfrage ausgefüllt hat und keine Zielseite angegeben wurde (vorheriger Punkt) (benutzen Sie ###CONTENT### um dem Benutzer nochmals seine Angaben und eventuelle Punkte anzuzeigen)!</label>
+			<label index="userdata.description">Hier können Sie Benutzerdaten hinzufügen - das können zum Beispiel der Nachname, die E-Mail, die Firma, etc. des Benutzers sein (damit hier Benutzerdaten erscheinen, müssen sie zuvor genauso wie die Fragen erstellt worden sein). Benutzerdaten werden nicht im Frontend angezeigt! Benutzen Sie dies für persönliche Fragen!</label>
+			<label index="affirmationmail.description">Wenn Sie in einem Benutzerdatenfeld nach seiner E-Mail fragen, können Sie ihm eine Bestätigungsmail schicken, indem Sie diesen Haken anwählen.</label>
+			<label index="mailfield.description">Wenn Sie die vorhergehende Checkbox ausgewählt haben, müssen Sie hier das Feld definieren, in dem er die Mail einträgt (e.g. das E-Mail Feld).</label>
+			<label index="mailsubject.description">Tragen Sie hier den Betreff der Bestätigungsmail ein!</label>
+			<label index="sendersmail.description">Tragen Sie hier die Absender-Mail der Bestätigungsmail ein!</label>
+			<label index="sendersname.description">Tragen Sie hier den Absendernamen der Bestätigungsmail ein!</label>
+			<label index="mailtemplate.description">Laden Sie hier eine HTML-Vorlage hoch, die der Bestätigungsmail dient! Benutzen Sie ###CONTENT### als Text, wenn das Ergebnis der Umfrage erscheinen soll.</label>
+			<label index="mailcontent.description">Tragen Sie hier den Inhalt der Bestätigungsmail ein! Benutzen Sie ###CONTENT### dort im Text, wo das Ergebnis der Umfrage erscheinen soll. Wenn Sie dies nicht tun, wird der Benutzer das Ergebnis nicht in der Mail erhalten! Wenn eine HTML-Vorlage benutzt wird, wird dieses Feld ignoriert!</label>
+		</languageKey>
+	</data>
+</T3locallang>
